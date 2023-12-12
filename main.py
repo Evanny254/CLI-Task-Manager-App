@@ -15,6 +15,8 @@ def main():
         elif choice == '4':
             update_task()
         elif choice == '5':
+            list_tasks()  
+        elif choice == '6':
             break
         else:
             print("Invalid choice. Please choose a valid option.")
@@ -25,7 +27,8 @@ def print_menu():
     print("2. Delete Task")
     print("3. View Task")
     print("4. Update Task")
-    print("5. Quit")
+    print("5. List Tasks")
+    print("6. Quit")
 
 def add_task():
     username = input("Enter username: ")
@@ -100,6 +103,15 @@ def update_task():
         print(f"Task '{task.title}' updated successfully.")
     else:
         print(f"Task with ID {task_id} not found.")
+def list_tasks():
+    tasks = session.query(Task).all()
+    if tasks:
+        print("List of all tasks:")
+        for task in tasks:
+            category_name = task.category.name if task.category else 'None'
+            print(f"ID: {task.id}, Title: {task.title}, Category: {category_name}")
+    else:
+        print("No tasks found.")
 
 if __name__ == '__main__':
     main()
