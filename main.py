@@ -162,8 +162,8 @@ def update_task():
         print(f"User '{username}' not found.")
 
 def list_tasks():
-    admin_username = "Socrates"
-    admin_password = "Socrates@254"
+    admin_username = "Evanny"
+    admin_password = "Evanny254"
     print("Admin Access Only")
     entered_username = input("Enter your username: ")
     entered_password = input("Enter your password: ")
