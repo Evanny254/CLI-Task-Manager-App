@@ -24,6 +24,7 @@ The application supports the following commands:
 2. Delete Task: Delete a task by providing its ID.
 3. View Task: View tasks associated with a specific user.
 4. Update Task: Update task details, including the task title and category.
+5. List Task:
 
 ## Example
 =======Task Manager Application=======
@@ -31,7 +32,8 @@ The application supports the following commands:
 2. Delete Task
 3. View Task
 4. Update Task
-5. Quit
+5. List Tasks
+6. Quit
 Enter your choice: 1
 
 Enter username: Evans
